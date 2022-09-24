@@ -6,12 +6,12 @@ const {
   createPost,
   updatePost,
   getAllPosts,
-  getPostsByUser,
+  // getPostsByUser,
   getUserById,
-  getPostById,
-  createTags,
-  createPostTag,
-  addTagsToPost,
+  // getPostById,
+  // createTags,
+  // createPostTag,
+  // addTagsToPost,
   getPostsByTagName
 } = require('./index');
 
