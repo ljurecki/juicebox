@@ -12,6 +12,18 @@ async function getAllUsers() {
   return rows;
 }
 
+
+async function getAllTags() {
+  try {
+    const { rows } = await client.query(
+    `SELECT * FROM tags;
+    `);
+    return rows;
+     }catch (error) {
+      throw error;
+    }
+}
+
 async function createUser({ username, password, name, location }) {
   try {
     const { rows: [user] } = await client.query(`
@@ -283,6 +295,7 @@ async function getUserById(userId) {
 module.exports = {
   client,
   getAllUsers,
+  getAllTags,
   createUser,
   updateUser,
   createPost,
